@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Купи мне шоколадку</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Создаем элементы
+            const body = document.body;
+            const container = document.createElement('div');
+            const heading = document.createElement('h1');
+            const button = document.createElement('button');
+
+            // Добавляем стили для body
+            body.style.display = "flex";
+            body.style.justifyContent = "center";
+            body.style.alignItems = "center";
+            body.style.height = "100vh";
+            body.style.margin = "0";
+            body.style.backgroundColor = "#ffe5b4";
+            body.style.fontFamily = "Arial, sans-serif";
+
+            // Настраиваем контейнер
+            container.style.textAlign = "center";
+            container.style.background = "#fff";
+            container.style.padding = "20px";
+            container.style.borderRadius = "10px";
+            container.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+            
+            // Настраиваем заголовок
+            heading.textContent = "Купи мне шоколадку, пожалуйста 🥺🍫";
+            heading.style.fontSize = "2rem";
+            heading.style.color = "#d2691e";
+
+            // Настраиваем кнопку
+            button.textContent = "Купить";
+            button.style.background = "#d2691e";
+            button.style.color = "white";
+            button.style.border = "none";
+            button.style.padding = "10px 20px";
+            button.style.borderRadius = "5px";
+            button.style.cursor = "pointer";
+            button.style.fontSize = "1rem";
+            button.style.transition = "background 0.3s";
+
+            // Добавляем hover-эффект
+            button.addEventListener("mouseover", () => {
+                button.style.background = "#a0522d";
+            });
+            button.addEventListener("mouseout", () => {
+                button.style.background = "#d2691e";
+            });
+
+            // Добавляем действие на клик
+            button.addEventListener("click", () => {
+                alert("Спасибо, что думаешь обо мне! 😊");
+            });
+
+            // Составляем структуру
+            container.appendChild(heading);
+            container.appendChild(button);
+            body.appendChild(container);
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
